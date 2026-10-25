@@ -1,0 +1,182 @@
+
+:root {
+  --page-bg: #f4f6fb;
+  --surface: #ffffff;
+  --text: #202938;
+  --muted: #64748b;
+  --border: #dbe2ea;
+  --primary: #3157d5;
+  --primary-hover: #2545b5;
+  --success: #167341;
+  --success-bg: #e8f7ee;
+  --error: #b42318;
+  --error-bg: #fef0ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--page-bg);
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 24px auto;
+}
+
+header,
+section {
+  margin-bottom: 24px;
+}
+
+header p {
+  color: var(--muted);
+}
+
+section {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin: 16px 0 6px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px 15px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--primary);
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#submit-btn {
+  margin-top: 16px;
+}
+
+.notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.notes-header h2 {
+  margin-bottom: 0;
+}
+
+#status {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #eef2f7;
+}
+
+#status.success {
+  color: var(--success);
+  background: var(--success-bg);
+}
+
+#status.error {
+  color: var(--error);
+  background: var(--error-bg);
+}
+
+#notes-list {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.note {
+  padding: 16px;
+  overflow-wrap: anywhere;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.note h3 {
+  margin: 0 0 8px;
+}
+
+.note p {
+  margin: 0 0 12px;
+  white-space: pre-wrap;
+}
+
+.delete-btn {
+  background: #b42318;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background: #8f1c13;
+}
+
+@media (max-width: 520px) {
+  body {
+    padding: 12px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  .notes-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
